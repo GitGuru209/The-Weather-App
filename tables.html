@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tables.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="tables.js"></script>
+  <title>The Weather App/table</title>
+</head>
+<body>
+  <div class="background">
+    <div class="screen">
+      <div class="top-bar">
+        <span class="material-symbols-outlined menu-icon">menu</span>
+        <div class="search">
+            <input type="search" id="search-bar" placeholder="Search a city...">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </div>
+
+        <div class="title">
+          <p id="title" class="protest-strike-regular">THE WEATHER APP</p>
+        </div>
+
+        <div class="table-box"></div>      
+
+        <!--SIDE PANEL STARTS-->
+        <div class="side-panel">
+          <nav>
+            <ul>
+              <li><a href="home.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+              <li><a href="tables.html"><i class="fas fa-chart-line"></i> Tables</a></li>
+              <li><a href="chatbot.html"><i class="fas fa-chart-line"></i> Chatbot</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <script>
+          const menuIcon = document.querySelector('.menu-icon');
+          const sidePanel = document.querySelector('.side-panel');
+        
+          menuIcon.addEventListener('click', function() {
+            if (sidePanel.style.left === '0px') {
+              sidePanel.style.left = '-250px'; // Hide panel
+            } else {
+              sidePanel.style.left = '0px'; // Show panel
+            }
+          });
+        </script>
+        
+
+        <script>
+           document.querySelector('.menu-icon').addEventListener('click', function() {
+           document.querySelector('.side-panel').classList.toggle('open');
+           document.querySelector('.screen').classList.toggle('shift');
+          });
+        </script>
+        <!--SIDE PANEL ENDS-->
+     </div>
+    </div>
+  </div>
+</body>
+</html>
