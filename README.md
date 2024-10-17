@@ -13,3 +13,6 @@ Responsive Design: Optimized for desktop and mobile devices.
 Weather Forecast: Includes a 7-day forecast for the selected location.
 Collapsible Side Panel: Access additional settings or information via a collapsible side panel.
 Chatbot Feature: Gemini AI chatbot with openweather API so you can ask the chatbot anything, including weather data related queries
+
+**NOTE**
+MAKE SURE TO CHANGE THE PATHS OF THE IMAGES ACCORDINGLY
